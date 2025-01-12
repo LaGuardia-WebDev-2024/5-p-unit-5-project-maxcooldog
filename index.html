@@ -15,73 +15,128 @@ Select ONE Additional Feature to Add
 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Into The Woods - Event Advertisement</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
 
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-}
+      .card {
+        perspective: 1000px;
+        margin: 20px;
+      }
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
+      .card-inner {
+        width: 300px;
+        height: 400px;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+        position: relative;
+      }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
+      .card:hover .card-inner {
+        transform: rotateY(180deg);
+      }
 
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
+      .card-front,
+      .card-back {
+        position: absolute;
+        backface-visibility: hidden;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
 
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
+      .card-front {
+        background-color: #f4f4f4;
+      }
 
-.flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
-}
-  </style>
-</head>
-<body>
-<h1>
-  Welcome to this years Laguardia operetta, La belle Hélène
-  </h1>
- <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="https://images.gofundme.com/D8RFslmyAuOklz8ukM8yIUj_RLI=/720x405/https://d2g8igdw686xgo.cloudfront.net/75930881_1697154081262810_r.png" alt="Avatar" style="width:300px;height:300px;">
+      .card-back {
+        background-color: #333;
+        color: white;
+        transform: rotateY(180deg);
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 80%;
+      }
+
+      h2 {
+        font-size: 24px;
+        margin: 10px 0;
+      }
+
+      p {
+        font-size: 18px;
+        padding: 10px;
+      }
+
+      .highlight {
+        font-weight: bold;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://imgs.search.brave.com/U0E9XB_YdFtUT-2Zzmt9ByuuCa0wd9uO2tXx3ddutsE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2E0L0Zpb3JlbGxv/X0guX0xhZ3VhcmRp/YV9IaWdoX1NjaG9v/bF9vZl9NdXNpY18m/X0FydF9hbmRfUGVy/Zm9ybWluZ19BcnRz/X2xvZ28uc3Zn" alt="Into The Woods" />
+            <h2>Into The Woods</h2>
+          </div>
+          <div class="card-back">
+            <p>Join us for a magical adventure into the woods!<br> Date: January 20, 2025<br> Time: 7:00 PM<br> Location: City Theater</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://imgs.search.brave.com/U0E9XB_YdFtUT-2Zzmt9ByuuCa0wd9uO2tXx3ddutsE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2E0L0Zpb3JlbGxv/X0guX0xhZ3VhcmRp/YV9IaWdoX1NjaG9v/bF9vZl9NdXNpY18m/X0FydF9hbmRfUGVy/Zm9ybWluZ19BcnRz/X2xvZ28uc3Zn" alt="Forest Scene" />
+            <h2>Into The Woods</h2>
+          </div>
+          <div class="card-back">
+            <p>Don't miss this captivating performance.<br> Date: January 20, 2025<br> Time: 7:00 PM<br> Location: City Theater</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://imgs.search.brave.com/JRBcUTciWSFt2681zd-Xz6huFSb9XM4ZbG4JtI9U38I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bGFndWFyZGlhaHNw/YS5vcmcvYXNzZXRz/LzA1MzQ3L1RFQ0hf/U1RVRElPL1Nob3Bf/Q3Jld19QaG90b3Mv/U2NyZWVuX1Nob3Rf/MjAyMi0wOS0xOF9h/dF8xMV80M18xOF9B/TS5wbmc" alt="Theater" />
+            <h2>Into The Woods</h2>
+          </div>
+          <div class="card-back">
+            <p>Get your tickets now for an unforgettable experience.<br> Date: January 20, 2025<br> Time: 7:00 PM<br> Location: City Theater <span class="highlight">Hurry, seats are limited!</span></p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="flip-card-back">
-      <h1>Invitation</h1>
-      <p>You are formally invited to this years laguarda opera!</p>
-      <p>Come appreciate the show.</p>
-    </div>
-  </div>
-</div>
-
-</body>
+  </body>
 </html>
+
