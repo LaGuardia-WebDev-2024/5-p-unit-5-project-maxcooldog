@@ -15,18 +15,128 @@ Select ONE Additional Feature to Add
 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Into The Woods - Event Advertisement</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
 
-  </style>
-</head>
-<body>
+      .card {
+        perspective: 1000px;
+        margin: 20px;
+      }
 
- 
+      .card-inner {
+        width: 300px;
+        height: 400px;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+        position: relative;
+      }
 
-</body>
+      .card:hover .card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .card-front,
+      .card-back {
+        position: absolute;
+        backface-visibility: hidden;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .card-front {
+        background-color: #f4f4f4;
+      }
+
+      .card-back {
+        background-color: #333;
+        color: white;
+        transform: rotateY(180deg);
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 80%;
+      }
+
+      h2 {
+        font-size: 24px;
+        margin: 10px 0;
+      }
+
+      p {
+        font-size: 18px;
+        padding: 10px;
+      }
+
+      .highlight {
+        font-weight: bold;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://imgs.search.brave.com/U0E9XB_YdFtUT-2Zzmt9ByuuCa0wd9uO2tXx3ddutsE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2E0L0Zpb3JlbGxv/X0guX0xhZ3VhcmRp/YV9IaWdoX1NjaG9v/bF9vZl9NdXNpY18m/X0FydF9hbmRfUGVy/Zm9ybWluZ19BcnRz/X2xvZ28uc3Zn" alt="Into The Woods" />
+            <h2>Into The Woods</h2>
+          </div>
+          <div class="card-back">
+            <p>Join us for a magical adventure into the woods!<br> Date: January 20, 2025<br> Time: 7:00 PM<br> Location: City Theater</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://imgs.search.brave.com/U0E9XB_YdFtUT-2Zzmt9ByuuCa0wd9uO2tXx3ddutsE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2E0L0Zpb3JlbGxv/X0guX0xhZ3VhcmRp/YV9IaWdoX1NjaG9v/bF9vZl9NdXNpY18m/X0FydF9hbmRfUGVy/Zm9ybWluZ19BcnRz/X2xvZ28uc3Zn" alt="Forest Scene" />
+            <h2>Into The Woods</h2>
+          </div>
+          <div class="card-back">
+            <p>Don't miss this captivating performance.<br> Date: January 20, 2025<br> Time: 7:00 PM<br> Location: City Theater</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://imgs.search.brave.com/JRBcUTciWSFt2681zd-Xz6huFSb9XM4ZbG4JtI9U38I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bGFndWFyZGlhaHNw/YS5vcmcvYXNzZXRz/LzA1MzQ3L1RFQ0hf/U1RVRElPL1Nob3Bf/Q3Jld19QaG90b3Mv/U2NyZWVuX1Nob3Rf/MjAyMi0wOS0xOF9h/dF8xMV80M18xOF9B/TS5wbmc" alt="Theater" />
+            <h2>Into The Woods</h2>
+          </div>
+          <div class="card-back">
+            <p>Get your tickets now for an unforgettable experience.<br> Date: January 20, 2025<br> Time: 7:00 PM<br> Location: City Theater <span class="highlight">Hurry, seats are limited!</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
+
